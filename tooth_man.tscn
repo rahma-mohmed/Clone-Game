@@ -1,0 +1,143 @@
+[gd_scene load_steps=25 format=3 uid="uid://5sblbth1a7jm"]
+
+[ext_resource type="Script" uid="uid://cpvnfpksxaxgf" path="res://tooth_man.gd" id="1_uw4wg"]
+[ext_resource type="Texture2D" uid="uid://cjpmbc8rcfe4n" path="res://Fierce-Tooth/10-Dead Ground/Dead Ground 01.png" id="2_80gng"]
+[ext_resource type="Texture2D" uid="uid://dt7ettkgb7frh" path="res://Fierce-Tooth/10-Dead Ground/Dead Ground 02.png" id="3_ulg1v"]
+[ext_resource type="Texture2D" uid="uid://cfcqyk3php8p1" path="res://Fierce-Tooth/10-Dead Ground/Dead Ground 03.png" id="4_fgbfe"]
+[ext_resource type="Texture2D" uid="uid://cumms6sejblau" path="res://Fierce-Tooth/10-Dead Ground/Dead Ground 04.png" id="5_hyhvv"]
+[ext_resource type="Texture2D" uid="uid://cqg28d6sh1x71" path="res://Fierce-Tooth/01-Idle/Idle 01.png" id="6_6koc3"]
+[ext_resource type="Texture2D" uid="uid://c0ndd5yxjhaex" path="res://Fierce-Tooth/01-Idle/Idle 02.png" id="7_uf267"]
+[ext_resource type="Texture2D" uid="uid://b5px62hr16fd0" path="res://Fierce-Tooth/01-Idle/Idle 03.png" id="8_bcgcl"]
+[ext_resource type="Texture2D" uid="uid://o3cljwqofik0" path="res://Fierce-Tooth/01-Idle/Idle 04.png" id="9_oek26"]
+[ext_resource type="Texture2D" uid="uid://bpxdmak5gvy2g" path="res://Fierce-Tooth/01-Idle/Idle 05.png" id="10_51fty"]
+[ext_resource type="Texture2D" uid="uid://iwatnb07j6tu" path="res://Fierce-Tooth/01-Idle/Idle 06.png" id="11_5qmbu"]
+[ext_resource type="Texture2D" uid="uid://dme5do4ew01jq" path="res://Fierce-Tooth/01-Idle/Idle 07.png" id="12_yhpuc"]
+[ext_resource type="Texture2D" uid="uid://cibhul7yvcbd6" path="res://Fierce-Tooth/01-Idle/Idle 08.png" id="13_d7ito"]
+[ext_resource type="Texture2D" uid="uid://fjs5konla2ov" path="res://Fierce-Tooth/02-Run/Run 01.png" id="14_18h0p"]
+[ext_resource type="Texture2D" uid="uid://bn52jhlo0mb38" path="res://Fierce-Tooth/02-Run/Run 02.png" id="15_ryift"]
+[ext_resource type="Texture2D" uid="uid://tmkrf8kuuqq0" path="res://Fierce-Tooth/02-Run/Run 03.png" id="16_v847l"]
+[ext_resource type="Texture2D" uid="uid://rp2yind148o6" path="res://Fierce-Tooth/02-Run/Run 04.png" id="17_bryr8"]
+[ext_resource type="Texture2D" uid="uid://hx3bt8yag4py" path="res://Fierce-Tooth/02-Run/Run 05.png" id="18_xpnvj"]
+[ext_resource type="Texture2D" uid="uid://dtesmwht15a0x" path="res://Fierce-Tooth/02-Run/Run 06.png" id="19_l3nop"]
+[ext_resource type="AudioStream" uid="uid://7ojxwk5enuwm" path="res://Music/material-hammer-394500.mp3" id="20_80gng"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cx7dw"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f37pl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_80gng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ulg1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fgbfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hyhvv")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6koc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uf267")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bcgcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oek26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_51fty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5qmbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yhpuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_d7ito")
+}],
+"loop": true,
+"name": &"Ideal",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_18h0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ryift")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_v847l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bryr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xpnvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_l3nop")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ghnf8"]
+radius = 192.66551
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6k6m"]
+size = Vector2(32, 40)
+
+[node name="ToothMan" type="CharacterBody2D"]
+script = ExtResource("1_uw4wg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cx7dw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3.8146973e-06, 1.9073486e-06)
+scale = Vector2(1.9117647, 2.25)
+sprite_frames = SubResource("SpriteFrames_f37pl")
+animation = &"Ideal"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(16, 0)
+shape = SubResource("CircleShape2D_ghnf8")
+
+[node name="EnemyDeath" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyDeath"]
+position = Vector2(0, -16.000002)
+scale = Vector2(0.85937506, 0.8633933)
+polygon = PackedVector2Array(0, 0, 8, -8, 3.5439377, -8.000001, -8, -8)
+
+[node name="HardArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HardArea"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_y6k6m")
+
+[node name="EnemyDeathAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_80gng")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="EnemyDeath" to="." method="_on_enemy_death_body_entered"]
+[connection signal="body_entered" from="HardArea" to="." method="_on_hard_area_body_entered"]

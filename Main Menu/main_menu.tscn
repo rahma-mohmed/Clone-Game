@@ -1,0 +1,126 @@
+[gd_scene load_steps=10 format=3 uid="uid://dysiyl4gfyg4h"]
+
+[ext_resource type="Script" uid="uid://cqlr4wx3xp4wq" path="res://Main Menu/main_menu.gd" id="1_hd3la"]
+[ext_resource type="Script" uid="uid://c5okfwgcvdifr" path="res://parallax_bg.gd" id="2_b6svo"]
+[ext_resource type="Texture2D" uid="uid://s5niu4edrgo4" path="res://BG Image.png" id="3_tgyvh"]
+[ext_resource type="Texture2D" uid="uid://p0tpkqqkhmms" path="res://Small Cloud 2.png" id="4_eq6yn"]
+[ext_resource type="Texture2D" uid="uid://djvmphi47bqju" path="res://Small Cloud 3.png" id="5_xn1h2"]
+[ext_resource type="Texture2D" uid="uid://cqinkh1vr706m" path="res://Big Clouds.png" id="6_ev4s5"]
+[ext_resource type="Texture2D" uid="uid://chjvttyarub3x" path="res://Water Reflect Big 01.png" id="7_qm7iq"]
+[ext_resource type="Texture2D" uid="uid://vhfhq3t5e4e1" path="res://Water Reflect Big 02.png" id="8_jhmoq"]
+[ext_resource type="Texture2D" uid="uid://0u117cc6ry33" path="res://Water Reflect Big 03.png" id="9_bbj2o"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_hd3la")
+
+[node name="ParallaxBG" type="ParallaxBackground" parent="."]
+script = ExtResource("2_b6svo")
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBG"]
+motion_mirroring = Vector2(1148, 0)
+
+[node name="BgImage" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(577.5, 326)
+scale = Vector2(2.9921875, 5.046875)
+texture = ExtResource("3_tgyvh")
+
+[node name="SmallCloud2" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(1031.1875, 379.1875)
+scale = Vector2(2.222745, 3.3250003)
+texture = ExtResource("4_eq6yn")
+
+[node name="SmallCloud6" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(999, 196)
+scale = Vector2(2.0695488, 2.7071424)
+texture = ExtResource("4_eq6yn")
+
+[node name="SmallCloud10" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(999, 82)
+scale = Vector2(2.0695488, 2.7071424)
+texture = ExtResource("4_eq6yn")
+
+[node name="SmallCloud7" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(264, 118)
+scale = Vector2(2.0695488, 2.7071424)
+texture = ExtResource("4_eq6yn")
+
+[node name="SmallCloud11" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(152, 200)
+scale = Vector2(2.0695488, 2.7071424)
+texture = ExtResource("4_eq6yn")
+
+[node name="SmallCloud9" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(630, 72)
+scale = Vector2(2.0695488, 2.7071424)
+texture = ExtResource("4_eq6yn")
+
+[node name="SmallCloud8" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(96, 392)
+scale = Vector2(2.0695488, 2.7071424)
+texture = ExtResource("4_eq6yn")
+
+[node name="SmallCloud5" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(782.1875, 351.6875)
+scale = Vector2(3.99718, 4.9535713)
+texture = ExtResource("4_eq6yn")
+
+[node name="SmallCloud3" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(813, 149)
+scale = Vector2(1.5571429, 1.6282052)
+texture = ExtResource("5_xn1h2")
+
+[node name="SmallCloud4" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(520, 153)
+scale = Vector2(1.5571429, 1.6282052)
+texture = ExtResource("5_xn1h2")
+
+[node name="BigClouds" type="Sprite2D" parent="ParallaxBG/ParallaxLayer1"]
+position = Vector2(376, 360)
+scale = Vector2(1.328125, 1.589109)
+texture = ExtResource("6_ev4s5")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBG"]
+motion_mirroring = Vector2(1148, 0)
+
+[node name="WaterReflectBig01" type="Sprite2D" parent="ParallaxBG/ParallaxLayer2"]
+position = Vector2(179, 511)
+texture = ExtResource("7_qm7iq")
+
+[node name="WaterReflectBig02" type="Sprite2D" parent="ParallaxBG/ParallaxLayer2"]
+position = Vector2(945, 544)
+texture = ExtResource("7_qm7iq")
+
+[node name="WaterReflectBig03" type="Sprite2D" parent="ParallaxBG/ParallaxLayer2"]
+position = Vector2(377, 488)
+texture = ExtResource("8_jhmoq")
+
+[node name="WaterReflectBig04" type="Sprite2D" parent="ParallaxBG/ParallaxLayer2"]
+position = Vector2(621, 511)
+texture = ExtResource("9_bbj2o")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBG"]
+motion_mirroring = Vector2(1148, 0)
+
+[node name="Start" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 288.0
+offset_right = 302.0
+offset_bottom = 319.0
+scale = Vector2(4.7960477, 4.655433)
+theme_override_colors/font_color = Color(0.38999414, 0.9752384, 0.9940055, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 16
+text = "Start"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 696.0
+offset_top = 288.0
+offset_right = 742.0
+offset_bottom = 319.0
+scale = Vector2(4.7960477, 4.655433)
+theme_override_colors/font_color = Color(0.16106603, 0.99801487, 0.9649238, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+text = "Exit"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

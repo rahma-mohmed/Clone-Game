@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmqh1x251r1ng"]
+
+[ext_resource type="Script" uid="uid://b2gs2rj3fofwc" path="res://gam.gd" id="1_5458l"]
+[ext_resource type="Texture2D" uid="uid://b4xra8nbd8i5n" path="res://01.png" id="2_yt4ol"]
+[ext_resource type="Texture2D" uid="uid://gucr48i31xdf" path="res://02.png" id="3_0mxr6"]
+[ext_resource type="Texture2D" uid="uid://blakb4nltq1d5" path="res://03.png" id="4_a6hrw"]
+[ext_resource type="Texture2D" uid="uid://cp73sw5hdv4e6" path="res://04.png" id="5_753h7"]
+[ext_resource type="AudioStream" uid="uid://dcwfyeyn3i12i" path="res://Music/material-gold-394476.mp3" id="6_1b5s6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b5hrk"]
+radius = 13.793113
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0a4aj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yt4ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0mxr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a6hrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_753h7")
+}],
+"loop": true,
+"name": &"Ideal",
+"speed": 5.0
+}]
+
+[node name="Gam" type="Area2D"]
+script = ExtResource("1_5458l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.1599993, 1)
+shape = SubResource("CircleShape2D_b5hrk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.7399988, 1.5)
+sprite_frames = SubResource("SpriteFrames_0a4aj")
+animation = &"Ideal"
+autoplay = "Ideal"
+frame_progress = 0.14652173
+
+[node name="CoinAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_1b5s6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
