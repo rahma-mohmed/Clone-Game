@@ -15,7 +15,6 @@ The game is a learning project where you can move, jump, collect gems, and survi
 ## 🕹️ Controls
 - **Arrow Keys (← →) / A-D** → Move left or right  
 - **Space / Enter** → Jump  
-- **Esc** → Quit  
 
 ## 📷 Gameplay
 1. Move around the level.  
